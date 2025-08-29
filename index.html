@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemilang Teknik - Jasa Penjualan & Pemasangan CCTV Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .instalation-process {
+            position: relative;
+        }
+        .instalation-process::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3b82f6;
+        }
+        .logo-container {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20konsultasi%20tentang%20CCTV" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="logo-container mr-3">
+                        <img src="https://drive.google.com/thumbnail?id=1fRwVuma755cI-kqE3jVYuRh83yVI2Nxs&sz=w100" 
+                             alt="Logo Gemilang Teknik" 
+                             class="w-full h-full object-contain"
+                             onerror="this.src='https://placehold.co/48x48/2563eb/ffffff?text=GT&font=roboto'; this.parentElement.style.background='#2563eb'">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-blue-600">Gemilang Teknik</h1>
+                        <p class="text-xs text-gray-600">Pemilik: Veri Andikajaya</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300">Beranda</a>
+                    <a href="#products" class="text-gray-700 hover:text-blue-600 transition duration-300">Produk</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300">Layanan</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">Tentang</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Kontak</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20konsultasi%20tentang%20CCTV" 
+                       class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300 flex items-center"
+                       target="_blank">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        <span class="hidden sm:inline">WhatsApp</span>
+                    </a>
+                    <a href="tel:089531047088" 
+                       class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        <span class="hidden sm:inline">Telepon</span>
+                    </a>
+                    <button class="md:hidden">
+                        <i class="fas fa-bars text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Keamanan Terjamin dengan CCTV Berkualitas</h2>
+                    <p class="text-xl mb-8 opacity-90">Solusi keamanan terbaik untuk rumah, kantor, dan bisnis Anda dengan jasa pemasangan profesional dan produk CCTV terbaru.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                            <i class="fas fa-shopping-cart mr-2"></i>Beli Sekarang
+                        </button>
+                        <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20jadwal%20konsultasi%20pemasangan%20CCTV" 
+                           class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300 flex items-center"
+                           target="_blank">
+                            <i class="fas fa-calendar-alt mr-2"></i>Jadwal Konsultasi
+                        </a>
+                    </div>
+                    <div class="mt-6 flex items-center">
+                        <i class="fab fa-whatsapp text-green-300 text-xl mr-2"></i>
+                        <span class="opacity-90">Hubungi WhatsApp: <strong>089531047088</strong></span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/693671bc-68c4-4aee-b022-00c9c2348ee6.png" alt="Modern CCTV security system installation showing multiple cameras monitoring a commercial building exterior with professional technicians at work" class="rounded-lg shadow-2xl">
+                    <div class="absolute -bottom-4 -right-4 bg-white text-blue-600 p-4 rounded-lg shadow-lg">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold">500+</div>
+                            <div class="text-sm">Klien Puas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tentang Gemilang Teknik</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Perusahaan profesional dibawah pimpinan Veri Andikajaya yang berpengalaman dalam bidang keamanan</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/70e35fbb-5d91-43fc-a493-175422351b30.png" alt="Veri Andikajaya - Pemilik Gemilang Teknik, profesional bidang keamanan CCTV dengan latar belakang proyek instalasi yang sukses" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Profil Perusahaan</h3>
+                    <p class="text-gray-600 mb-6">
+                        Gemilang Teknik adalah perusahaan yang bergerak di bidang penjualan dan pemasangan CCTV profesional. 
+                        Dibawah kepemimpinan Veri Andikajaya, kami telah melayani ribuan klien dengan komitmen memberikan 
+                        solusi keamanan terbaik.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600">8+</div>
+                            <div class="text-gray-600">Tahun Pengalaman</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600">1000+</div>
+                            <div class="text-gray-600">Proyek Selesai</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600">24/7</div>
+                            <div class="text-gray-600">Customer Support</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-600">98%</div>
+                            <div class="text-gray-600">Kepuasan Klien</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-4 bg-blue-50 rounded-lg">
+                        <h4 class="font-semibold text-blue-800 mb-2">Kontak Langsung:</h4>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-600 mr-2"></i>
+                            <span>WhatsApp: <strong>089531047088</strong></span>
+                        </div>
+                        <div class="flex items-center mt-2">
+                            <i class="fas fa-phone text-blue-600 mr-2"></i>
+                            <span>Telepon: <strong>089531047088</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Mengapa Memilih Gemilang Teknik?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Layanan profesional dengan garansi и support 24/7 untuk keamanan optimal</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Pemasangan Profesional</h3>
+                    <p class="text-gray-600">Teknisi berpengalaman dengan sertifikasi</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Garansi 2 Tahun</h3>
+                    <p class="text-gray-600">Garansi produk dan jasa pemasangan</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Support 24/7</h3>
+                    <p class="text-gray-600">Bantuan teknis setiap saat</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-truck text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Gratis Survey</h3>
+                    <p class="text-gray-600">Survey lokasi tanpa biaya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Produk CCTV Terlaris</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Pilih dari berbagai jenis CCTV dengan teknologi terbaru</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/66277e69-ba26-41ac-9349-b47eb3fe0261.png" alt="High-resolution dome CCTV camera with night vision capability mounted on a white ceiling in a modern office setting" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">CCTV Dome 4MP</h3>
+                        <p class="text-gray-600 mb-4">Resolusi 4MP dengan night vision hingga 30m</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-blue-600">Rp 1.250.000</span>
+                            <span class="text-green-600 bg-green-100 px-2 py-1 rounded text-sm">Stok Tersedia</span>
+                        </div>
+                        <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20tanya%20tentang%20CCTV%20Dome%204MP" 
+                           class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 flex items-center justify-center"
+                           target="_blank">
+                            <i class="fab fa-whatsapp mr-2"></i>Tanya via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0ad939d4-8697-4c37-bf74-547579b5a3f9.png" alt="Bullet CCTV camera with weatherproof housing installed outdoors monitoring a parking lot with clear visibility day and night" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">CCTV Bullet 5MP</h3>
+                        <p class="text-gray-600 mb-4">Weatherproof, ideal untuk outdoor dengan zoom optical</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-blue-600">Rp 1.850.000</span>
+                            <span class="text-green-600 bg-green-100 px-2 py-1 rounded text-sm">Stok Tersedia</span>
+                        </div>
+                        <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20tanya%20tentang%20CCTV%20Bullet%205MP" 
+                           class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 flex items-center justify-center"
+                           target="_blank">
+                            <i class="fab fa-whatsapp mr-2"></i>Tanya via WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/38defabe-1abe-4d97-8465-a9597f0db175.png" alt="PTZ CCTV camera with 360-degree rotation capability mounted on a pole monitoring a large industrial area" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">CCTV PTZ 8MP</h3>
+                        <p class="text-gray-600 mb-4">360° rotation, zoom 20x, perfect for large areas</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-blue-600">Rp 3.500.000</span>
+                            <span class="text-green-600 bg-green-100 px-2 py-1 rounded text-sm">Stok Tersedia</span>
+                        </div>
+                        <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20tanya%20tentang%20CCTV%20PTZ%208MP" 
+                           class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-300 flex items-center justify-center"
+                           target="_blank">
+                            <i class="fab fa-whatsapp mr-2"></i>Tanya via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20lihat%20semua%20produk%20CCTV" 
+                   class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 flex items-center justify-center mx-auto w-64"
+                   target="_blank">
+                    <i class="fab fa-whatsapp mr-2"></i>Lihat Semua Produk via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Konsultasi gratis untuk solusi keamanan terbaik</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Kontak Gemilang Teknik</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me/6289531047088" class="text-blue-600 hover:text-blue-800" target="_blank">
+                                        089531047088
+                                    </a>
+                                    <p class="text-sm text-gray-600">Respon cepat 24 jam</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Telepon</h4>
+                                    <a href="tel:089531047088" class="text-blue-600 hover:text-blue-800">
+                                        089531047088
+                                    </a>
+                                    <p class="text-sm text-gray-600">Senin - Sabtu, 08:00 - 17:00</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-user text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Pemilik</h4>
+                                    <p class="text-gray-600">Veri Andikajaya</p>
+                                    <p class="text-sm text-gray-600">Ahli CCTV berpengalaman</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-green-50 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-2">Promo Khusus!</h4>
+                            <p class="text-green-700">Gratis survey dan konsultasi untuk 10 customer pertama setiap bulan!</p>
+                            <a href="https://wa.me/6289531047088?text=Halo%20Gemilang%20Teknik,%20saya%20mau%20klaim%20promo%20gratis%20survey" 
+                               class="inline-block mt-3 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300"
+                               target="_blank">
+                                Klaim Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Lokasi Kami</h3>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg mb-4">
+                            <img src="https://placehold.co/600x400" alt="Peta lokasi Gemilang Teknik - Perusahaan jasa pemasangan CCTV profesional" class="w-full h-48 object-cover rounded-lg">
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Melayani pemasangan CCTV untuk area Jabodetabek dan sekitarnya. 
+                            Tim teknisi kami siap datang ke lokasi Anda.
+                        </p>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Area Layanan:</h4>
+                            <ul class="text-blue-700 list-disc list-inside">
+                                <li>Jakarta</li>
+                                <li>Bogor</li>
+                                <li>Depok</li>
+                                <li>Tangerang</li>
+                                <li>Bekasi</li>
+                                <li>Dan sekitarnya</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="logo-container mr-3">
+                            <img src="https://drive.google.com/thumbnail?id=1fRwVuma755cI-kqE3jVYuRh83yVI2Nxs&sz=w100" 
+                                 alt="Logo Gemilang Teknik" 
+                                 class="w-full h-full object-contain"
+                                 onerror="this.src='https://placehold.co/48x48/2563eb/ffffff?text=GT&font=roboto'; this.parentElement.style.background='#2563eb'">
+                        </div>
+                        <h3 class="text-xl font-bold">Gemilang Teknik</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Penyedia jasa pemasangan CCTV profesional dengan pengalaman lebih dari 8 tahun.
+                    </p>
+                    <p class="text-gray-400">
+                        Pemilik: Veri Andikajaya
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp text-green-400 mr-2"></i>
+                            <a href="https://wa.me/6289531047088" class="text-gray-400 hover:text-white" target="_blank">
+                                089531047088
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-400 mr-2"></i>
+                            <a href="tel:089531047088" class="text-gray-400 hover:text-white">
+                                089531047088
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Penjualan CCTV</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Pemasangan Profesional</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Maintenance & Repair</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Konsultasi Keamanan</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Gemilang Teknik. All rights reserved.</p>
+           <SKIPPED_HTML_EDIT_MODE></SKIPPED_HTML_EDIT_MODE>
+
+Saya perlu menambahkan nomor WhatsApp 089531047088 ke website. Saya akan menambahkannya di beberapa tempat strategis:
+
+1. Di header (tombol Hubungi Kami)
+2. Di footer 
+3. Tombol WhatsApp khusus di pojok kanan bawah
+4. Di section kontak
+
+`cctv-store.html`
